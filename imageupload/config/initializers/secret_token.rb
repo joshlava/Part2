@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Imageupload::Application.config.secret_token = '02b5d5d446da3babfde06d4140bcc91ecf50095db9cafae431ff5dc507f4edb69c020ed564e0296ec6ca33ba6c8d3b857dc0e18ae7c917eb9b62182bd70a334f'
+Imageupload::Application.config.secret_token = '0569c2f83ff80f1ccf38afd54efa4589884d474f0970fd7217fdc06ba7f12af121af2c8cae030ad0de6c9414b22f828e3a965a7de234c6434795f5b1d275c8e7'
