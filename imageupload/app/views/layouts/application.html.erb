@@ -6,19 +6,25 @@
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Rails3 Devise Rspec Cucumber" %>">
     <%= stylesheet_link_tag "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
-	<%= google_webfonts_link_tag "Open Sans" %>
+	<%= google_webfonts_link_tag "Open Sans" => [400, 700] %>
     <%= csrf_meta_tags %>
     <%= yield(:head) %>
   </head>
   <body class="<%= controller_name %> <%= action_name %>">
     <div id="container" class="container">
       <header>
+  		<div id="banner">
+  			<%= image_tag("logo.png", :alt => "Facebook - logo") %>
+			<h1>Balloon</h1>
+  		</div>
         <%= render 'layouts/navigation' %>
         <%= render 'layouts/messages' %>
       </header>
-      <div id="main" role="main">
+	  <hr class="top"/>
+      <div id="maincontainer" role="main">
         <%= yield %>
       </div>
+	  <hr class="bottom">
       <footer>
   		<div id="footercontainer">
   		<div id="left">

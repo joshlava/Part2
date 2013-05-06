@@ -37,6 +37,185 @@ a:link, a:visited {
 a:hover { text-decoration: none; }
 a img { border-width:0; }
 
+/** Header encompasses the banner for Balloon **/
+
+header {
+	display: block;
+	height: 10%;
+	width: 100%;
+	font-family: 'Open Sans', sans-serif;
+}
+
+header #banner {
+	float: left;
+	margin-left: 5%;
+	margin-top: 1%;
+}
+
+header #banner img  {
+	float:left;
+}
+
+header #banner h1 {
+	float: left;
+	padding-top: 4%;
+}
+
+header nav {
+	float: right;
+	margin-right: 10%;
+	margin-top: 5%;
+}
+
+header nav ul {
+	font-size: 14px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+header nav ul li {
+	display: block;
+	position: relative;
+	float: left;
+}
+
+header nav ul li ul { display: none;} 
+
+header nav ul li a {
+	display: block;
+	text-decoration: none;
+	color: #fff;
+	padding: 5px 15px 5px 15px;
+	margin-left: 1px;
+	white-space: nowrap;
+}
+
+header nav li:hover ul {
+	display: block;
+	position: absolute;
+}
+
+header nav li:hover li {
+	float: none;
+	font-size: 11px;
+}
+
+header nav li:hover a { background: #E6FAFF; }
+
+/** **********/
+
+/** Horizontal rules with styling to separate the content, header, footer **/
+
+hr.top {
+	display: block;
+	width: 90%;
+	border-color: #E6FAFF;
+	background-color: #E6FAFF;
+}
+
+
+hr.bottom {
+	display:block;
+	width:90%;
+	margin-top: 10%;
+	border-color: #E6FAFF;
+	background-color: #E6FAFF;	
+}
+
+/** **********/
+
+/** Main container to hold page specifics **/
+
+#maincontainer {
+	display: block;
+	width: 100%;
+}
+
+#maincontainer h1 {
+	margin: 0px auto;
+	width: 15%;
+	font-weight: 600;
+}
+
+/** **********/
+
+/** Sign up segment of introduction page **/
+
+.signup {
+	display: block;
+	float: right;
+	width: 55%;
+	margin-left: 5%;
+	margin-bottom: 5%;
+	background-color: rgba(250, 250, 250, 0.5);
+}
+
+
+.signup ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.signup li {
+	padding: 3px;
+}
+
+input#fname {
+	width: 187px;
+	height: 33px;
+	font-size: 20px;
+}
+
+
+input#lname {
+	width: 187px;
+	height: 33px;
+	font-size: 20px;
+}
+
+input#email {
+	width: 400px;
+	height: 33px;
+	font-size: 20px;
+}
+
+input#password {
+	width: 400px;
+	height: 33px;
+	font-size: 20px;
+}
+
+.signup input:not([type = "submit"]) {
+	padding: 5px;
+	margin-right: 10px;
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	border-radius: 3px;
+	box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.1);
+}
+
+.signup input[type=submit] {
+	border: 1px solid rgba(0, 0, 0, 0.3);  
+    background: #64c8ef; /* Old browsers */  
+    background: -moz-linear-gradient(top,  #64c8ef 0%, #00a2e2 100%); /* FF3.6+ */  
+    background: -webkit-gradient(linear, left top, left bottombottom, color-stop(0%,#64c8ef), color-stop(100%,#00a2e2)); /* Chrome,Safari4+ */  
+    background: -webkit-linear-gradient(top,  #64c8ef 0%,#00a2e2 100%); /* Chrome10+,Safari5.1+ */  
+    background: -o-linear-gradient(top,  #64c8ef 0%,#00a2e2 100%); /* Opera 11.10+ */  
+    background: -ms-linear-gradient(top,  #64c8ef 0%,#00a2e2 100%); /* IE10+ */   
+    padding: 5px 15px;  
+    margin-right: 0; 
+ 	margin-left: auto;
+    margin-top: 15px;  
+    border-radius: 3px;  
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
+	width: 400px;
+	height: 50px;
+}
+
+
+/** **********/
+
 #flash_notice, #flash_alert {
   padding: 5px 8px;
   margin: 10px 0;
