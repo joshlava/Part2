@@ -2,10 +2,11 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Rails3 Devise Rspec Cucumber" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Project Part 2" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Rails3 Devise Rspec Cucumber" %>">
     <%= stylesheet_link_tag "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
+	<%= google_webfonts_link_tag "Open Sans" %>
     <%= csrf_meta_tags %>
     <%= yield(:head) %>
   </head>
@@ -19,6 +20,35 @@
         <%= yield %>
       </div>
       <footer>
+  		<div id="footercontainer">
+  		<div id="left">
+  		<ul>
+  			<li><a href="home.html"><b>Balloon</b></a></li>
+  			<li><a href="news.html">News</a></li>
+  			<li><a href="featured.html">Featured</a></li>
+  		</ul>
+  		</div>
+  		<div id="mid">
+  		<ul>
+  			<li><a href="about.html"><b>About Us</b></a></li>
+  			<li><a href="history.html">History</a></li>
+  		</ul>
+  		</div>
+  		<div id="right">
+  		<ul>
+  			<li><a href="support.html"><b>Support</b></a></li>
+  			<li><a href="terms.html">Privacy & Terms</a></li>
+  			<li><a href="contact.html">Contact Us</a></li>
+  			<li><a href="sitemap.html">Site Map</a></li>
+  		</ul>
+  		</div>
+  		<div id="last">
+  		<ul>
+  			<li><a href="http://www.facebook.com/"><%= image_tag("facebook-32-black.png", :alt => "Facebook - logo") %></a></li>
+  			<li><a href="https://twitter.com/"><%= image_tag("twitter-32-black.png", :alt => "Twitter - logo") %></a></li>
+  		</ul>
+  		</div>
+  		</div>
       </footer>
     </div> <!--! end of #container -->
   </body>
