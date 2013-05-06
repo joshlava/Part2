@@ -1,8 +1,13 @@
+<article class = "intro">
+	 <%= image_tag("display.png", :alt => "Introductory Image") %>
+	 <h3>Free your images with Balloon</h3>
+</article>
+
 <section class="signup">
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
-<p>
+	<p>Join Balloon today!</p>
 	<ul>
 		<li>
 	 	   <%= f.text_field :name, :id => 'fname', :placeholder => "First Name" %>
@@ -23,11 +28,14 @@
   	  	<li>
 	  	  <%= f.submit "Sign up" %>
 	  	</li>
+		<li>
+		  <%= render "devise/shared/links" %>
+		</li>
 	</ul>
+	
   
 
 <% end %>
 
 </section>
 
-<%= render "devise/shared/links" %>
