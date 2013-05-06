@@ -1,21 +1,35 @@
-<%= link_to "Project Part 2", root_path, :class => 'brand' %>
-<ul class="nav">
-  <% if user_signed_in? %>
-    <li>
-    <%= link_to 'Logout', destroy_user_session_path, :method=>'delete' %>
-    </li>
+
+<nav>
+	<ul id="navmenu">
+		<li>
+			<b>
+			<%= link_to "Project Part 2", root_path, :class => 'brand' %>
+			</b>
+		</li>
+  	  <% if user_signed_in? %>
+   		<li>
+			<b>
+    		<%= link_to 'Logout', destroy_user_session_path, :method=>'delete' %>
+			</b>
+    	</li>
   <% else %>
-    <li>
+    	<li>
+			<b>
     <%= link_to 'Login', new_user_session_path %>
-    </li>
-  <% end %>
+			</b>
+   	 </li>
+  		<% end %>
   <% if user_signed_in? %>
-    <li>
-    <%= link_to 'Edit account', edit_user_registration_path %>
-    </li>
+    	<li>
+			<b>
+    			<%= link_to 'Edit account', edit_user_registration_path %>
+			</b>
+   	 	</li>
   <% else %>
-    <li>
-    <%= link_to 'Sign up', new_user_registration_path %>
-    </li>
+    	<li>
+			<b>
+    		<%= link_to 'Sign up', new_user_registration_path %>
+		</b>
+    	</li>
   <% end %>
 </ul>
