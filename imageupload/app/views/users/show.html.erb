@@ -3,14 +3,15 @@
 <p>Email: <%= @user.email if @user.email %></p>
 <div>
   <% for photo in @user.photos %>
-    <div>
-      <%= image_tag photo.image_url(:thumb) if photo.image? %>
-     
-      <div>
-        <%= link_to "edit", edit_photo_path(photo) %> |
-        <%= link_to "remove", photo, :confirm => 'Are you sure?', :method => :delete %>
-      </div>
-    </div>
+    <div id="portfolio">
+		<ul>
+			<li>
+    			<%= image_tag photo.image_url(:thumb) if photo.image? %>
+				<div>
+      				<%= link_to "edit", edit_photo_path(photo) %> |
+      		  	  	<%= link_to "remove", photo, :confirm => 'Are you sure?', :method => :delete %>
+      		  	</div>
+    		</li>
   <% end %>
   <div class="clear"></div>
 </div> 

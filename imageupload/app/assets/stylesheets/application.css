@@ -376,6 +376,25 @@ article.sign h3 {
 
 /** **********/
 
+#portfolio {
+	width: 75%;
+	margin: 0 auto;
+}
+
+#portfolio li {
+	display: inline;
+	list-style-type: none;
+}
+
+#portfolio img {
+	width: 40%;
+	margin: 2%;
+	border: 4px solid;
+	border-color: #27b;
+	border-radius: 10px;
+}
+
+
 #news {
 	margin: 0px auto;
 	margin-top: 5%;
@@ -389,9 +408,11 @@ article.sign h3 {
 #flash_notice, #flash_alert {
   padding: 5px 8px;
   margin: 10px 0;
+
 }
 #flash_notice {
   background-color: #CFC;
+  z-index: 1;
   border: solid 1px #6C6;
 }
 #flash_alert {
