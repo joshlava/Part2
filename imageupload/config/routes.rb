@@ -1,5 +1,10 @@
 Imageupload::Application.routes.draw do
   
+  get "news/info"
+
+  resources :posts
+
+
   authenticated :user do
     root :to => 'home#index'
   end
