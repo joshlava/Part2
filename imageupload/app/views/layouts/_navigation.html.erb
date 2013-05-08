@@ -3,7 +3,12 @@
 	<ul id="navmenu">
 		<li>
 			<b>
-			<%= link_to "Project Part 2", root_path, :class => 'brand' %>
+			<%= link_to "News", root_path, :class => 'brand' %>
+			</b>
+		</li>
+		<li>
+			<b>
+			<%= link_to "Featured", root_path, :class => 'brand' %>
 			</b>
 		</li>
   	  <% if user_signed_in? %>
@@ -25,11 +30,10 @@
     			<%= link_to 'Edit account', edit_user_registration_path %>
 			</b>
    	 	</li>
-  <% else %>
-    	<li>
-			<b>
-    		<%= link_to 'Sign up', new_user_registration_path %>
-		</b>
-    	</li>
   <% end %>
+		<li>
+			<b>
+				<%= link_to 'Support', edit_user_registration_path %>
+			</b>
+		</li>
 </ul>
