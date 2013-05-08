@@ -11,16 +11,7 @@
 	<ul>
 		<li>
 	 	   <%= f.text_field :name, :id => 'fname', :placeholder => "First Name" %>
-		<p>
-		<%= image_tag(@user.avatar_url(:thumb)) if @user.avatar? %>
-		<%= f.file_field :avatar %>
-		<%= f.hidden_field :avatar_cache %>
-		</p>
   		</li>
-		<li>
-			
-		</li>
-
  	 	<li>
   	 	   <%= f.email_field :email, :id => 'email', :placeholder => 'Email' %>
   		</li>
