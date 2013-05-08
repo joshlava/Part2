@@ -23,14 +23,9 @@
 	 	   <%= f.email_field :email, :id => 'email', :placeholder => "Email" %>
 	</li>
   	<li>
-  	  <%= f.password_field :password, :autocomplete => "off", :id => 'password', :placeholder => "New Password" %>
-	  (leave blank if you don't want to change it)</i>
+  	  		<%= f.password_field :password, :autocomplete => "off", :id => 'password', :placeholder => "New Password" %>
+	</i>
 	</li>
-
-  	<li>
- 	  <%= f.password_field :password_confirmation, :id => 'password', :placeholder => "Confirm New Password" %>
-	</li>
-	
   	<li>
  	  <%= f.password_field :current_password, :id => 'password', :placeholder => "Current Password" %>
 	</li>
