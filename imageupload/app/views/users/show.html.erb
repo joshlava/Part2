@@ -1,3 +1,19 @@
 <h3>User</h3>
 <p>User: <%= @user.name %></p>
 <p>Email: <%= @user.email if @user.email %></p>
+<div>
+  <% for photo in @user.photos %>
+    <div>
+      <%= image_tag photo.image_url(:thumb) if photo.image? %>
+     
+      <div>
+        <%= link_to "edit", edit_photo_path(photo) %> |
+        <%= link_to "remove", photo, :confirm => 'Are you sure?', :method => :delete %>
+      </div>
+    </div>
+  <% end %>
+  <div class="clear"></div>
+</div> 
+<p>
+  <%= link_to "Add a Painting", new_photo_path(:user_id => @user) %>
+</p> 

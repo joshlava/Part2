@@ -5,7 +5,9 @@ class User < ActiveRecord::Base
   # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-    
+  
+  has_many :photos  
+  
   validates_presence_of :name
   validates_uniqueness_of :name, :email, :case_sensitive => false
 
@@ -14,6 +16,5 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body
   
   mount_uploader :avatar, AvatarUploader   
-  
 
 end

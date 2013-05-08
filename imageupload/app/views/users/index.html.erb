@@ -1,7 +1,13 @@
-<ul class="users">
-  <% @users.each do |user| %>
-    <li>
-      <%= link_to user.name, user %> signed up <%= user.created_at.to_date %>
-    </li>
-  <% end %>
-</ul>
+<div id="paintings">  
+  <% @user.photos do |photo| %>  
+    <div class="painting">  
+      <%= image_tag photo.image_url.to_s %>  
+      <div class="name"><%= photo.name %></div>  
+      <div class="actions">  
+        <%= link_to "edit", edit_photo_path(painting) %> |  
+        <%= link_to "remove", photo, :confirm => 'Are you sure?', :method => :delete %>  
+      </div>  
+    </div>  
+  <% end %>  
+  <div class="clear"></div>  
+</div>  
