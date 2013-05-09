@@ -1,4 +1,6 @@
 
 <% @users.each do |user| %>
   <p>User: <%=link_to user.name, user %></p>
+      Photos: <%= user.photos.size %>
+    </div>  
 <% end %>

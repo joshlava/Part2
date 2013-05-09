@@ -1,10 +1,9 @@
 <h3>User</h3>
 <% @users.each do |user| %>
   <div>
-	  
-    <h2><%= link_to user.name, user %></h2>
+	  <h2><%= link_to user.name, user %></h2>
     Photos: <%= user.photos.size %>
   </div>
-<% end %>  
+<%end %>  
 
 
