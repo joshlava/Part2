@@ -375,20 +375,46 @@ article.sign h3 {
 }
 
 /** **********/
+#profile {
+	display: block;
+	width: 100%;
+}
+
+
+#userinfo p { padding-left: 5%; }
+
+#welcome { padding-left: 5%; }
+
+#userinfo form {
+	float: right;
+	border: 4px solid;
+	border-color: #27b;
+	background-color: #E6FAFF;
+	padding: 2%;
+	border-radius: 10px;
+	margin-right: 15%;
+	margin-top: -9%;
+}
+
 
 #portfolio {
-	width: 75%;
+	width: 800px;
 	margin: 0 auto;
 }
 
 #portfolio li {
-	display: inline;
+	display: inline-block;
+	padding: 20px;
 	list-style-type: none;
+	width: 200px;
+}
+
+#portfolio p {
+	margin: 0 auto;
+	width: 120px;
 }
 
 #portfolio img {
-	width: 40%;
-	margin: 2%;
 	border: 4px solid;
 	border-color: #27b;
 	border-radius: 10px;
@@ -412,7 +438,6 @@ article.sign h3 {
 }
 #flash_notice {
   background-color: #CFC;
-  z-index: 1;
   border: solid 1px #6C6;
 }
 #flash_alert {

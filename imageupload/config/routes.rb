@@ -2,8 +2,7 @@ Imageupload::Application.routes.draw do
   
   get "news/info"
 
-  resources :posts
-
+ 
 
   authenticated :user do
     root :to => 'home#index'
@@ -13,9 +12,10 @@ Imageupload::Application.routes.draw do
   end
   root :to => 'home#index'
   devise_for :users
+  
+  resources :posts
   resources :users
   resources :photos
-  
   
  
  end
