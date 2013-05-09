@@ -5,7 +5,7 @@
 		  <%= link_to "Add a Photo", new_photo_path(:user_id => @user) %>
 		</p> 
 		<p style="font-size: 22px; font-weight: 800;">Welcome, <span style="color:#27b"><%= @user.name %></span></p>
-		<p style=" color: #27b;"> Date Joined: <%= @user.created_at %><span style="margin-left: 10px; padding-left: 10px; border-left:2px solid;">Images set free: </span></p>
+		<p style=" color: #27b;"> Date Joined: <%= @user.created_at %><span style="margin-left: 10px; padding-left: 10px; border-left:2px solid;">Images set free:  <%= @user.photos.size %> </span></p>
 </div>
 
 <div id="portfolio">
