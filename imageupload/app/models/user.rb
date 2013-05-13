@@ -25,16 +25,12 @@ class User < ActiveRecord::Base
   #validates_presence_of   :avatar
   #validates_integrity_of  :avatar
   #validates_processing_of :avatar
-<<<<<<< HEAD
-=======
+
   before_create :assign_role
 
     def assign_role
       # assign a default role if no role is assigned
       self.add_role :user if self.roles.first.nil?
     end
-
-
->>>>>>> Friends and User Restrictions
   
 end

@@ -447,10 +447,12 @@ article.sign h3 {
 
 }
 #flash_notice {
+	float:right;
   background-color: #CFC;
   border: solid 1px #6C6;
 }
-#flash_alert {
+#flash_alert {f
+	float:right;
   background-color: #FCC;
   border: solid 1px #C66;
 }
