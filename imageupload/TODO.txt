@@ -1,7 +1,7 @@
 List of things that still need to be done for project
 
 Aesthetic stuff:
-Firefox footer problem
+Firefox f̶o̶o̶t̶e̶r̶ everything problem //fixed, but can someone test on different browsers/ resolutions, iv only tested on my laptop with firefox and chrome on a fairly standard size
 maybe centre the whole page, atm it sits on the left //done, see if you guys like it in centre or not.
 add tab logo //added 
 
