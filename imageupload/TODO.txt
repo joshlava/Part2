@@ -20,12 +20,15 @@ The system
 Bonus marks (110%)
 
   the system should attempt to geo-tag photos that get uploaded, by using either the new HTML 5 Geo API (8%). //gotta look into this. it says using either, then gives one option so im not too sure if this is the only way to do it, because it can be done with cookies 
-              using cookies :
+              //just messing around with the html5 geo stuff, chrome seems to really not like it, firstly you have to share location and sometimes it just doesnt, seems to work a bit better in firefox, but it somehow managed to crash it once.. 
+              // http://www.w3schools.com/html/html5_geolocation.asp 
+
+                using cookies :
                             def lat_lng
                                  @lat_lng ||= session[:lat_lng] ||= get_geolocation_data_the_hard_way
                             end
 
-
+            
   Building the site using HTML5 and CSS3 is worth an additional 2%. // ✓ pretty easy 2% here, especially since part 1 was already in html5 and css3, dont really know why anyone would use anything else..
 
 
