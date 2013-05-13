@@ -1,19 +1,25 @@
 List of things that still need to be done for project
-
-Aesthetic stuff:
-Firefox css problem //fixed, but can someone test on different browsers/ resolutions, iv only tested on my laptop with firefox and chrome on a fairly standard size
-maybe centre the whole page, atm it sits on the left //done, see if you guys like it in centre or not.
-add tab logo //added 
-
-
-Server side:
-at the moment when a user logs in they are able to navigate to another users images, and upload edit and delete as that other user. obviously yths shouldnt happen.
-Sign-up:
-Currently have the potential to add an avatar. should we do it?
+What needs to be done:
+  Aesthetic stuff:
+  Firefox css problem //fixed, but can someone test on different browsers/ resolutions, iv only tested on my laptop with firefox and chrome on a fairly standard size
+  maybe centre the whole page, atm it sits on the left //done, see if you guys like it in centre or not.
+  add tab logo //added 
 
 
+  Users:
+  at the moment when a user logs in they are able to navigate to another users images, and upload edit and delete as that other user. obviously yths shouldnt happen.
+  Sign-up:
 
 
-Geolocation of photos:
-Does somebody want to have a look at how to do this?
+  Geolocation of photos:
+  Does somebody want to have a look at how to do this?
 
+
+
+Possible changes:
+
+  Users:
+  When a user logs in they currently get directed to a list of users, should they instead go to their profile
+
+  Should users have an avatar? and if they do will they require one to sign up?
+  
