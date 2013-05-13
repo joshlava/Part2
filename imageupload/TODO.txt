@@ -15,4 +15,5 @@ Currently have the potential to add an avatar. should we do it?
 
 
 Geolocation of photos:
+Does somebody want to have a look at how to do this?
 
