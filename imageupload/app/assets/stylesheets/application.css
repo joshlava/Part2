@@ -17,11 +17,14 @@ html, body, content {
 }
 
 body{
+	width:960px;
+	margin: 0 auto;
+	/*Above code centres the page, if you guys dont like, just delete and un comment the below
 	display: block;
 	width: 80%;
 
     min-width: 1000px;
-	min-height: 800px;
+	min-height: 800px;*/
 }
 
 
