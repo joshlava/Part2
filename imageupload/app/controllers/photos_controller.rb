@@ -1,6 +1,9 @@
 class PhotosController < ApplicationController
+  before_filter :authenticate_user!
+
   def new
     @photo = Photo.new(:user_id => params[:user_id])
+    authorize! :new, @photo
   end
 
   def create
@@ -11,6 +14,7 @@ class PhotosController < ApplicationController
     else
       render :action => 'new'
     end
+    authorize! :create, @photo
   end
 
   def edit

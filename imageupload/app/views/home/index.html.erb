@@ -2,5 +2,6 @@
 <% @users.each do |user| %>
   <p>User: <%=link_to user.name, user %></p>
       Photos: <%= user.photos.size %>
-    </div>  
+    </div>
+	<%= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post %>  
 <% end %>

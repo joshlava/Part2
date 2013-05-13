@@ -12,10 +12,12 @@ Imageupload::Application.routes.draw do
   end
   root :to => 'home#index'
   devise_for :users
-  
-  resources :posts
   resources :users
   resources :photos
+  resources :posts
+  resources :friendships
+  
+  
   
  
  end

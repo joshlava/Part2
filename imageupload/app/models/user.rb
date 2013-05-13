@@ -1,5 +1,10 @@
 class User < ActiveRecord::Base
-  mount_uploader :avatar, AvatarUploader   
+  rolify
+  has_many :photos  
+  has_many :friendships
+  has_many :friends, :through => :friendships
+  mount_uploader :avatar, AvatarUploader
+ 
    
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
@@ -7,10 +12,12 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
          
+
   # Setup accessible (or protected) attributes for your model
+  attr_accessible :role_ids, :as => :admin
   attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :avatar, :avatar_cache, :remove_avatar
   
-  has_many :photos  
+ 
   
   validates_presence_of :name
   validates_uniqueness_of :name, :email, :case_sensitive => false
@@ -18,5 +25,16 @@ class User < ActiveRecord::Base
   #validates_presence_of   :avatar
   #validates_integrity_of  :avatar
   #validates_processing_of :avatar
+<<<<<<< HEAD
+=======
+  before_create :assign_role
+
+    def assign_role
+      # assign a default role if no role is assigned
+      self.add_role :user if self.roles.first.nil?
+    end
+
+
+>>>>>>> Friends and User Restrictions
   
 end
