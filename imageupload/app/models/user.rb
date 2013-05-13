@@ -15,8 +15,8 @@ class User < ActiveRecord::Base
   validates_presence_of :name
   validates_uniqueness_of :name, :email, :case_sensitive => false
 
-  validates_presence_of   :avatar
-  validates_integrity_of  :avatar
-  validates_processing_of :avatar
+  #validates_presence_of   :avatar
+  #validates_integrity_of  :avatar
+  #validates_processing_of :avatar
   
 end
