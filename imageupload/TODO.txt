@@ -1,0 +1,16 @@
+List of things that still need to be done for project
+
+Aesthetic stuff:
+Firefox footer problem
+maybe centre the whole page, atm it sits on the left
+add tab logo
+
+
+Server side:
+At the moment when a second user logs in, their add image link is to add an image for the first user
+
+
+
+
+Geolocation of photos:
+
