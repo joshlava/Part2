@@ -7,7 +7,9 @@ add tab logo //added
 
 
 Server side:
-At the moment when a second user logs in, their add image link is to add an image for the first user
+at the moment when a user logs in they are able to navigate to another users images, and upload edit and delete as that other user. obviously yths shouldnt happen.
+Sign-up:
+Currently have the potential to add an avatar. should we do it?
 
 
 
