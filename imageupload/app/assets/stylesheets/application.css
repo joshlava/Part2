@@ -12,19 +12,22 @@
  *= require_tree .
  */
 html, body, content {
-    height: 100%;
+ 	/*width:100%;*/
 	font-family: 'Open Sans', sans-serif;
+
 }
 
 body{
+
 	width:960px;
 	margin: 0 auto;
+	display: block;
 	/*Above code centres the page, if you guys dont like, just delete and un comment the below
 	display: block;
 	width: 80%;
 
     min-width: 1000px;
-	min-height: 800px;*/
+	min-heigiht: 800px;*/
 }
 
 
@@ -122,6 +125,8 @@ header nav li:hover a { background: #E6FAFF; }
 hr.top {
 	display: block;
 	width: 90%;
+	margin-top:12%;
+	height:10%;
 	border-color: #E6FAFF;
 	background-color: #E6FAFF;
 }
@@ -129,8 +134,9 @@ hr.top {
 
 hr.bottom {
 	display:block;
-	width:90%;
-	margin-top: 10%;
+	width:90%
+	height:10%;
+	margin-top: 50%;
 	border-color: #E6FAFF;
 	background-color: #E6FAFF;	
 }
@@ -456,7 +462,7 @@ footer {
 	height: 10%;
 	margin: 4% 30%;
 	font-size: 12px
-	
+
 }
 
 footer #footercontainer { margin: 0 auto; }
@@ -472,4 +478,3 @@ footer #left { float:left; }
 footer #right { float: left; }
 footer #mid { float: left; }
 footer #last { float: left; }
-
