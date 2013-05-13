@@ -8,7 +8,7 @@ The system should:
   allow a user to create an account and login to the system // ✓ few minor tweaks required
   allow registered users to upload photos // ✓
   automatically resize the images into the following sizes: thumbnail, small, medium, large (you can decided the actual dimensions for each size); // think this still needs to be done, saw something along these lines coming along somewhere though
-  allow public users browse each users photos in a gallery format // well this doesnt make sense.. typical, anyway i think she means allow public users and site users to browse photos in a gallery format. anyway this is sort of already done, but at the moment they can also edit the photos, which needs to be taken away. not sure about the public users part though. I'm gonna post in help forum for clarification
+  allow public users browse each users photos in a gallery format // i think she meant public users /to/ browse, but you never know.  anyway i think she means allow public users and site users to browse photos in a gallery format. anyway this is sort of already done, but at the moment they can also edit the photos, which needs to be taken away.
 
 Full marks (100%)
 
