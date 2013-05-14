@@ -2,6 +2,7 @@
 <% if user_signed_in? %>
 <div id="userinfo">
 	<div id="welcome">
+<<<<<<< HEAD
 	<% if @user != current_user %>
 		<% not_curr_user = "hide" %>
 	<% end %>
@@ -9,8 +10,19 @@
 	<%= link_to "Add a Photo", new_photo_path(:user_id => @user) %>
 		</p> 
 		<p style="font-size: 22px; font-weight: 800;"><span class="<%= not_curr_user %>">Welcome, </span><span style="color:#27b"><%= @user.name %></span></p>
+=======
+		<% if user_signed_in? %>
+		<div id="addphoto">
+		<p style="float:right; margin-right: 200px;">
+<%= link_to "Add a Photo", new_photo_path(:user_id => @user), :id => "addphoto" %>
+		</p> 
+		</div>
+		<% end %>
+		<p style="font-size: 22px; font-weight: 800;">Welcome, <span style="color:#27b"><%= @user.name %></span></p>
+>>>>>>> Minor changes
 		<p style=" color: #27b;"> Date Joined: <%= @user.created_at %><span style="margin-left: 10px; padding-left: 10px; border-left:2px solid;">Images set free:  <%= @user.photos.size %> </span></p>
 </div>
+<section id="profile2">
 <div id="portfolio">
 	<ul>
  	<% for photo in @user.photos %>
@@ -34,5 +46,6 @@
 </ul>
 <% end %>
 </div>
+</section>
   <div class="clear"></div>
 </div> 

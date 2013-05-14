@@ -5,6 +5,7 @@ class UsersController < ApplicationController
   
   def index
     @user = User.all
+    @users = User.search(params[:id])
   end
 
   def show
