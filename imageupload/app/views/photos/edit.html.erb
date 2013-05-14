@@ -1,0 +1,16 @@
+<div id="profile">
+<h2>edit</h2>
+<% photo = @photo %>
+  <div id="portfolio">
+<%= image_tag photo.image_url(@size) %>
+    <form action="">
+      <select name="size">
+        <option value="<%= @size = :thumb %>">Thumbnail</option>
+        <option value="<%= @size = :small %>">Small</option>
+        <option value="<%= @size = :medium %>">Medium</option>
+        <option value="<%= @size = :large %>">Large</option>
+      </select>
+    </form>
+  </div>
+</div>
+
