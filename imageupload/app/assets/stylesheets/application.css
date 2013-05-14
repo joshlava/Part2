@@ -30,6 +30,10 @@ body{
 	min-heigiht: 800px;*/
 }
 
+h2 {
+	margin: 0px auto;
+}
+
 
 .brand {
   float: left;
@@ -428,6 +432,23 @@ article.sign h3 {
 }
 
 /** **********/
+
+#feature {
+	margin: 5%;
+	float:left;
+	width: 200px;
+	border: 4px solid;
+	border-color: #27b;
+	border-radius: 10px;
+}
+
+#feature p { padding-left: 5%; float: left; white-space: pre-line; }
+
+#feature img {
+	float: left;
+	margin-left: 3%;
+	margin-top: 2%;
+}
 #profile {
 	display: block;
 	width: 1000px;

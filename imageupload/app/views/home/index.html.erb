@@ -1,7 +1,10 @@
-
+<h1>Featured</h1>
 <% @users.each do |user| %>
-  <p>User: <%=link_to user.name, user %></p>
+<div id="feature">
+	<%= image_tag(user.avatar_url(:thumb)) if user.avatar_url %>
+  <p>User: <%=link_to user.name, user %>
       Photos: <%= user.photos.size %>
-    </div>
-	<%= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post %>  
+	<%= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post %>
+	</p>
+</div>  
 <% end %>
