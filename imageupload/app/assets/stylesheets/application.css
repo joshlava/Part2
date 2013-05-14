@@ -35,14 +35,48 @@ body{
   float: left;
   padding-right: 8px;
 }
-ul.nav {
-  list-style: none;
-  margin: 0 0 2em;
-  padding: 0;
+
+header nav {
+	float: right;
+	margin-right: 10%;
+	margin-top: 5%;
 }
-ul.nav li {
-  display: inline;
+
+header nav ul {
+	font-size: 14px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
+
+header nav ul li {
+	display: block;
+	position: relative;
+	float: left;
+}
+
+header nav ul li ul { display: none;} 
+
+header nav ul li a {
+	display: block;
+	text-decoration: none;
+	color: #fff;
+	padding: 5px 15px 5px 15px;
+	margin-left: 1px;
+	white-space: nowrap;
+}
+
+header nav li:hover ul {
+	display: block;
+	position: absolute;
+}
+
+header nav li:hover li {
+	float: none;
+	font-size: 11px;
+}
+
+header nav li:hover a { background: #E6FAFF; }
 
 a:link, a:visited {
     color:#27b;
@@ -399,12 +433,20 @@ article.sign h3 {
 }
 
 #profile .hide { display: none;}
-#userinfon {
-	height: 200px;
-}
+
+
 #userinfo p { padding-left: 5%; }
 
-#welcome { padding-left: 5%; }
+#userinfo img {
+	float: left;
+	border: 4px solid;
+	border-color: #27b;
+	margin-left: 3%;
+	background-color: #E6FAFF;
+	border-radius: 10px;
+}
+
+#welcome { padding-left: 15%; }
 
 
 #portfolio {
@@ -454,22 +496,34 @@ article.sign h3 {
 #friends {
 	width: 200px;
 	float: right;
-	
-	margin-right: 18%;
+	margin-right: 10%;
 	border: 4px solid;
 	border-color: #27b;
 	border-radius: 10px;
+    background: #64c8ef; /* Old browsers */  
+    background: -moz-linear-gradient(top,  #64c8ef 0%, #00a2e2 100%); /* FF3.6+ */  
+    background: -webkit-gradient(linear, left top, left bottombottom, color-stop(0%,#64c8ef), color-stop(100%,#00a2e2)); /* Chrome,Safari4+ */  
+    background: -webkit-linear-gradient(top,  #64c8ef 0%,#00a2e2 100%); /* Chrome10+,Safari5.1+ */  
+    background: -o-linear-gradient(top,  #64c8ef 0%,#00a2e2 100%); /* Opera 11.10+ */  
+    background: -ms-linear-gradient(top,  #64c8ef 0%,#00a2e2 100%);
 }
 
 #friends h3 {
 	padding-left: 20px;
 }
 
-#friends li {
-	display: inline-block;
-	padding-left: 20px;
-	list-style-type: none;
+#friends ul {
+    background: #64c8ef; /* Old browsers */  
+    background: -moz-linear-gradient(top,  #64c8ef 0%, #00a2e2 100%); /* FF3.6+ */  
+    background: -webkit-gradient(linear, left top, left bottombottom, color-stop(0%,#64c8ef), color-stop(100%,#00a2e2)); /* Chrome,Safari4+ */  
+    background: -webkit-linear-gradient(top,  #64c8ef 0%,#00a2e2 100%); /* Chrome10+,Safari5.1+ */  
+    background: -o-linear-gradient(top,  #64c8ef 0%,#00a2e2 100%); /* Opera 11.10+ */  
+    background: -ms-linear-gradient(top,  #64c8ef 0%,#00a2e2 100%);
+}
 
+#friends li {
+	padding-left: 10px;
+	list-style-type: none;
 }
 
 

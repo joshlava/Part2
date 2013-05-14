@@ -1,9 +1,10 @@
 class User < ActiveRecord::Base
   rolify
+  mount_uploader :avatar, AvatarUploader
   has_many :photos  
   has_many :friendships
   has_many :friends, :through => :friendships
-  mount_uploader :avatar, AvatarUploader
+  
  
    
   # Include default devise modules. Others available are:

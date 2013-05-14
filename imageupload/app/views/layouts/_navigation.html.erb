@@ -29,6 +29,9 @@
 			<b>
     			<%= link_to 'Profile', user_path(current_user) %>
 			</b>
+			<ul>
+				<li><%= link_to 'Edit', edit_registration_path(current_user) %></li>
+			</ul>
    	 	</li>
   <% end %>
 		<li>

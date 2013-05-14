@@ -1,6 +1,7 @@
 <div id="profile">
 <% if user_signed_in? %>
 <div id="userinfo">
+	<%= image_tag(@user.avatar_url(:thumb)) if @user.avatar_url %>
 	<div id="welcome">
 	<% if @user != current_user %>
 		<% not_curr_user = "hide" %>
@@ -16,7 +17,6 @@
 		<p style="font-size: 22px; font-weight: 800;"><span class="<%= not_curr_user %>">Welcome, </span><span style="color:#27b"><%= @user.name %></span></p>
 		<p style=" color: #27b;"> Date Joined: <%= @user.created_at %><span style="margin-left: 10px; padding-left: 10px; border-left:2px solid;">Images set free:  <%= @user.photos.size %> </span></p>
 		<p style="" class="<%= not_curr_user %>">
-	
 	<%= link_to "Add a Photo", new_photo_path(:user_id => @user), :id => "addphoto" %>
 		</p> 
 </div>

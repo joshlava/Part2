@@ -9,6 +9,10 @@ include CarrierWave::RMagick
   # Include the Sprockets helpers for Rails 3.1+ asset pipeline compatibility:
   # include Sprockets::Helpers::RailsHelper
   # include Sprockets::Helpers::IsolatedHelper
+  
+  def default_url
+      "/images/fallback/" + [version_name, "default.png"].compact.join('_')
+    end
 
   # Choose what kind of storage to use for this uploader:
   storage :file
@@ -20,10 +24,9 @@ include CarrierWave::RMagick
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
   
-  process :resize_to_fit => [800, 800]
   
   version :thumb do
-      process :resize_to_fill => [50, 50]
+      process :resize_to_fill => [115, 115]
   end
   
  
@@ -43,9 +46,7 @@ include CarrierWave::RMagick
   #   # do something
   # end
   
-  
 
-    process :resize_to_fit => [200, 200]
     
     
 
