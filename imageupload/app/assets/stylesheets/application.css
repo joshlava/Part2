@@ -141,6 +141,15 @@ hr.bottom {
 	background-color: #E6FAFF;	
 }
 
+hr.profbr {
+	display:block;
+	width: 900px;
+	height:10%;
+	margin-top: 50%;
+	border-color: #E6FAFF;
+	background-color: #E6FAFF;	
+}
+
 /** **********/
 
 /** Main container to hold page specifics **/
@@ -390,25 +399,16 @@ article.sign h3 {
 }
 
 #profile .hide { display: none;}
-
+#userinfon {
+	height: 200px;
+}
 #userinfo p { padding-left: 5%; }
 
 #welcome { padding-left: 5%; }
 
-#userinfo form {
-	float: right;
-	border: 4px solid;
-	border-color: #27b;
-	background-color: #E6FAFF;
-	padding: 2%;
-	border-radius: 10px;
-	margin-right: 15%;
-	margin-top: -9%;
-}
-
 
 #portfolio {
-	width: 600px;
+	width: 800px;
 	float: left;
 }
 
@@ -454,8 +454,22 @@ article.sign h3 {
 #friends {
 	width: 200px;
 	float: right;
-	margin-top: -10%;
-	margin-right: 50px;
+	
+	margin-right: 18%;
+	border: 4px solid;
+	border-color: #27b;
+	border-radius: 10px;
+}
+
+#friends h3 {
+	padding-left: 20px;
+}
+
+#friends li {
+	display: inline-block;
+	padding-left: 20px;
+	list-style-type: none;
+
 }
 
 
