@@ -124,7 +124,7 @@ header nav li:hover a { background: #E6FAFF; }
 
 hr.top {
 	display: block;
-	width: 90%;
+	width:900px;
 	margin-top:12%;
 	height:10%;
 	border-color: #E6FAFF;
@@ -134,7 +134,16 @@ hr.top {
 
 hr.bottom {
 	display:block;
-	width:90%
+	width:900px;
+	height:10%;
+	margin-top: 50%;
+	border-color: #E6FAFF;
+	background-color: #E6FAFF;	
+}
+
+hr.profbr {
+	display:block;
+	width: 900px;
 	height:10%;
 	margin-top: 50%;
 	border-color: #E6FAFF;
@@ -390,26 +399,17 @@ article.sign h3 {
 }
 
 #profile .hide { display: none;}
-
+#userinfon {
+	height: 200px;
+}
 #userinfo p { padding-left: 5%; }
 
 #welcome { padding-left: 5%; }
 
-#userinfo form {
-	float: right;
-	border: 4px solid;
-	border-color: #27b;
-	background-color: #E6FAFF;
-	padding: 2%;
-	border-radius: 10px;
-	margin-right: 15%;
-	margin-top: -9%;
-}
-
 
 #portfolio {
 	width: 800px;
-	margin: 0 auto;
+	float: left;
 }
 
 #portfolio li {
@@ -429,6 +429,49 @@ article.sign h3 {
 	border-color: #27b;
 	border-radius: 10px;
 }
+
+#addphoto {
+	border: 1px solid rgba(0, 0, 0, 0.3);  
+    background: #64c8ef; /* Old browsers */  
+    background: -moz-linear-gradient(top,  #64c8ef 0%, #00a2e2 100%); /* FF3.6+ */  
+    background: -webkit-gradient(linear, left top, left bottombottom, color-stop(0%,#64c8ef), color-stop(100%,#00a2e2)); /* Chrome,Safari4+ */  
+    background: -webkit-linear-gradient(top,  #64c8ef 0%,#00a2e2 100%); /* Chrome10+,Safari5.1+ */  
+    background: -o-linear-gradient(top,  #64c8ef 0%,#00a2e2 100%); /* Opera 11.10+ */  
+    background: -ms-linear-gradient(top,  #64c8ef 0%,#00a2e2 100%); /* IE10+ */   
+    padding: 5px 15px;  
+    margin-top: 15px;  
+    border-radius: 3px;  
+	color: black;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
+	width: 100px;
+	height: 50px;
+}
+
+#addphoto p {
+	color: black;
+}
+
+#friends {
+	width: 200px;
+	float: right;
+	
+	margin-right: 18%;
+	border: 4px solid;
+	border-color: #27b;
+	border-radius: 10px;
+}
+
+#friends h3 {
+	padding-left: 20px;
+}
+
+#friends li {
+	display: inline-block;
+	padding-left: 20px;
+	list-style-type: none;
+
+}
+
 
 
 
