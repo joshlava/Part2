@@ -175,11 +175,12 @@ hr.bottom {
 	background-color: #E6FAFF;	
 }
 
-hr.profbr {
+#profile hr {
 	display:block;
 	width: 900px;
 	height:10%;
-	margin-top: 50%;
+	margin-top: 10%;
+	margin-right: 7%;
 	border-color: #E6FAFF;
 	background-color: #E6FAFF;	
 }
