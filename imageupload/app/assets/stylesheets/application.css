@@ -124,7 +124,7 @@ header nav li:hover a { background: #E6FAFF; }
 
 hr.top {
 	display: block;
-	width: 1000px;
+	width:900px;
 	margin-top:12%;
 	height:10%;
 	border-color: #E6FAFF;
@@ -134,7 +134,7 @@ hr.top {
 
 hr.bottom {
 	display:block;
-	width:1000px;
+	width:900px;
 	height:10%;
 	margin-top: 50%;
 	border-color: #E6FAFF;
@@ -439,11 +439,9 @@ article.sign h3 {
     background: -o-linear-gradient(top,  #64c8ef 0%,#00a2e2 100%); /* Opera 11.10+ */  
     background: -ms-linear-gradient(top,  #64c8ef 0%,#00a2e2 100%); /* IE10+ */   
     padding: 5px 15px;  
-	font-color: black;
-    margin-right: 0; 
- 	margin-left: auto;
     margin-top: 15px;  
     border-radius: 3px;  
+	color: black;
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
 	width: 100px;
 	height: 50px;
@@ -455,13 +453,11 @@ article.sign h3 {
 
 #friends {
 	width: 200px;
-	float: left;
-	margin-left: 100px;
+	float: right;
+	margin-top: -10%;
+	margin-right: 50px;
 }
 
-#profile2 {
-	width: 1000px;
-}
 
 
 
