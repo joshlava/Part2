@@ -1,35 +1,38 @@
 <div id="profile">
+<% if user_signed_in? %>
 <div id="userinfo">
 	<div id="welcome">
-		<% if user_signed_in? %>
-		<p style="float:right; margin-right: 200px;">
-		  <%= link_to "Add a Photo", new_photo_path(:user_id => @user) %>
+	<% if @user != current_user %>
+		<% hide = "hide" %>
+	<% end %>
+		<p style="float:right; margin-right: 200px;" class="<%= hide %>">
+	<%= link_to "Add a Photo", new_photo_path(:user_id => @user) %>
 		</p> 
-		<% end %>
-		<p style="font-size: 22px; font-weight: 800;">Welcome, <span style="color:#27b"><%= @user.name %></span></p>
+		<p style="font-size: 22px; font-weight: 800;"><span class="<%= hide %>">Welcome, </span><span style="color:#27b"><%= @user.name %></span></p>
 		<p style=" color: #27b;"> Date Joined: <%= @user.created_at %><span style="margin-left: 10px; padding-left: 10px; border-left:2px solid;">Images set free:  <%= @user.photos.size %> </span></p>
 </div>
 <div id="portfolio">
 	<ul>
- 	   <% for photo in @user.photos %>
-  			<li>
-    			<%= image_tag photo.image_url(:thumb) if photo.image? %>
-				<p>
-      				<%= link_to "edit", edit_photo_path(photo) %>
+ 	<% for photo in @user.photos %>
+    <li>
+    <%= image_tag photo.image_url(:thumb) if photo.image? %>
+		  <p>
+      <%= link_to "edit", edit_photo_path(photo) %>
 					|
-      		  	  	<%= link_to "remove", photo, :confirm => 'Are you sure?', :method => :delete %>
+        <%= link_to "remove", photo, :confirm => 'Are you sure?', :method => :delete %>
 				</p>
     		</li>
  	<% end %>
 	</ul>
 </div>
 <div id="friends">
-<h3>Your Friends</h2>
+<h3><span class="<%= hide %>">Your </span>Friends</h2>
 <ul>
   <% for user in @user.friends %>
   <li><%= h user.name %></li>
   <% end %>  
 </ul>
+<% end %>
 </div>
   <div class="clear"></div>
 </div> 

@@ -389,6 +389,7 @@ article.sign h3 {
 	width: 1000px;
 }
 
+#profile .hide { display: none;}
 
 #userinfo p { padding-left: 5%; }
 
