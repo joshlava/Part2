@@ -1,7 +1,7 @@
 <div id="profile">
 <% if user_signed_in? %>
 <div id="userinfo">
-	<%= image_tag(@user.avatar_url(:thumb)) if @user.avatar_url %>
+  <%= link_to_if(@user.avatar_url, image_tag(@user.avatar_url(:thumb)), edit_display_path(current_user)) %>
 	<div id="welcome">
 	<% if @user != current_user %>
 		<% not_curr_user = "hide" %>

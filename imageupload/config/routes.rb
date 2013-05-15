@@ -2,7 +2,7 @@ Imageupload::Application.routes.draw do
   
   get "news/info"
 
- 
+  match 'users/:id/edit_display' => 'users#edit_display', :constraints => {:id => /\d+/}, :as => :edit_display
 
   authenticated :user do
     root :to => 'home#index'
