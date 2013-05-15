@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
   
   def index
-    @users = User.find(:all, :limit => 3, :order => 'created_at')
+    @featured = User.find(:all, :limit => 4, :order => 'RANDOM()')
+    @users = User.find(:all)
   end
 end

@@ -180,7 +180,7 @@ hr.bottom {
 	background-color: #E6FAFF;	
 }
 
-#profile hr {
+#hrpage {
 	display:block;
 	width: 900px;
 	height:10%;
@@ -435,11 +435,25 @@ article.sign h3 {
 /** **********/
 
 #home {
-	width: 500px;
-	margin-left: 5%;
-	float: left;
-	margin-bottom: 5%;
+	width: 600px;
+	margin: 0px auto;
 	background-color: rgba(250, 250, 250, 0.5);
+}
+
+#alluser {
+	width: 800px;
+	margin: 0 auto;
+}
+
+#alluser a {
+	font-weight: 600;
+	color: black;
+	
+}
+
+#alluser p { padding-left: 5%; float: left; white-space: pre-line; }
+
+#alluser img {
 }
 
 #feature {
@@ -505,8 +519,8 @@ article.sign h3 {
 }
 
 #portfolio img {
-	
-	
+	border-radius: 0px;
+	border: 0px solid;
 	
 }
 
