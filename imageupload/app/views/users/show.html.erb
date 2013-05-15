@@ -6,14 +6,6 @@
 	<% if @user != current_user %>
 		<% not_curr_user = "hide" %>
 	<% end %>
-	<div id="friends">
-	<h3><span class="<%= not_curr_user %>">Your </span>Friends</h2>
-	<ul>
-	  <% for user in @user.friends %>
-	  <li><%= h user.name %></li>
-	  <% end %>  
-	</ul>
-	</div>
 		<p style="font-size: 22px; font-weight: 800;"><span class="<%= not_curr_user %>">Welcome, </span><span style="color:#27b"><%= @user.name %></span></p>
 		<p style=" color: #27b;"> Date Joined: <%= @user.created_at %><span style="margin-left: 10px; padding-left: 10px; border-left:2px solid;">Images set free:  <%= @user.photos.size %> </span></p>
 		<p style="" class="<%= not_curr_user %>">
@@ -34,6 +26,15 @@
     </li>
  	<% end %>
 	</ul>
+</div>
+
+<div id="friends">
+<h3><span class="<%= not_curr_user %>">Your </span>Friends</h2>
+<ul>
+  <% for user in @user.friends %>
+  <li><%= h user.name %></li>
+  <% end %>  
+</ul>
 </div>
 
 <% end %>
