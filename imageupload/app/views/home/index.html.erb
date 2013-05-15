@@ -1,21 +1,25 @@
+
 <h1>Featured</h1>
 
-<article id = "featimage">
-	
-</article>
 <section id="home">
+	<div id="grid">
 <% @featured.each do |user| %>
 <div id="feature">
+	<% if user.avatar_url(:thumb) %>
 	<%= image_tag(user.avatar_url(:thumb)) if user.avatar_url %>
+	<% end %>
   <p><%=link_to user.name, user %>
       Photos: <%= user.photos.size %>
 	<%= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post %>
 	</p>
 </div>  
 <% end %>
+</div>
 </section>
+
 <h1>Community</h1>
-<div id="alluser">
+<section id"allusers">
+<div id="grid2">
 <% @users.each do |user| %>
 <div id="feature">
 	<%= image_tag(user.avatar_url(:thumb)) if user.avatar_url %>
@@ -25,4 +29,5 @@
 	</p>
 </div>  
 <% end %>
+</div>
 </section>
