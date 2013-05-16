@@ -22,7 +22,6 @@ body{
 
 	width:960px;
 	margin: 0 auto;
-	display: block;
 	/*Above code centres the page, if you guys dont like, just delete and un comment the below
 	display: block;
 	width: 80%;
@@ -164,7 +163,7 @@ header nav li:hover a { background: #E6FAFF; }
 hr.top {
 	display: block;
 	width:900px;
-	margin-top:12%;
+	margin-top:1%;
 	height:10%;
 	border-color: #E6FAFF;
 	background-color: #E6FAFF;
@@ -175,7 +174,7 @@ hr.bottom {
 	display:block;
 	width:900px;
 	height:10%;
-	margin-top: 50%;
+	margin-top:4%;
 	border-color: #E6FAFF;
 	background-color: #E6FAFF;	
 }
@@ -183,7 +182,7 @@ hr.bottom {
 #hrpage {
 	display:block;
 	width: 900px;
-	height:10%;
+	height:.5px;
 	margin-top: 5%;
 	margin-right: 7%;
 	border-color: #E6FAFF;
@@ -191,29 +190,25 @@ hr.bottom {
 }
 
 /** **********/
-#titles {
-	width: 900px;
-	background-color: #E6FAFF;
-	height: 45px;
-	margin-bottom: 5%;
-}
+
 /** Main container to hold page specifics **/
 
 #maincontainer {
-	display: block;
-	width: 100%;
+	width: 900px;
 }
 
 #maincontainer h1 {
 	margin: 0px auto;
 	padding: 3%;
-	width: 15%;
+	width: 100px;
 	color: black;
 	font-weight: 600;
 }
 
+
 #maincontainer h2 {
-	padding-top:5%;
+	margin: 0px auto;
+	padding-top: 5%;
 	padding-bottom: 3%;
 }
 
@@ -223,7 +218,7 @@ hr.bottom {
 
 .signup {
 	width: 400px;
-	margin-left: 5%;
+	/*margin-left: 5%;*/
 	float: left;
 	margin-bottom: 5%;
 	background-color: rgba(250, 250, 250, 0.5);
@@ -247,6 +242,7 @@ input#fname {
 	margin-bottom: 2%;
 	font-size: 20px;
 }
+
 
 input#avatar {
 	width: 160px;
@@ -304,7 +300,7 @@ input#password {
 .signin {
 	float: left;
 	width: 400px;
-	margin-left: 5%;
+	/*margin-left: 5%;*/
 	margin-bottom: 5%;
 	background-color: rgba(250, 250, 250, 0.5);
 
@@ -352,26 +348,38 @@ input#password {
 
 /** Edit account **/
 
-.edit {
-	display: block;
-	margin: 0 auto;
-	width: 50%;
+#edit {
+	/*margin: 0 auto;*/
+	width: 500px;
+	margin:0px auto;
 	background-color: rgba(250, 250, 250, 0.5);
 }
 
+#edit img {
+	float: right;
+}
 
-.edit ul {
+
+#edit ul {
 	list-style-type: none;
 	padding: 0;
 	margin: 0;
 }
 
-.edit li {
+#edit li {
 	padding: 3px;
 }
 
+#edit input[type=file] {
+	width: 160px;
+	height: 33px;
+	float:left;
+	
+	font-size: 10px;
+}
 
-.edit input:not([type = "submit"]) {
+
+#edit input:not([type = "submit"]) {
 	padding: 5px;
 	margin-right: 10px;
 	border: 1px solid rgba(0, 0, 0, 0.3);
@@ -379,7 +387,7 @@ input#password {
 	box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.1);
 }
 
-.edit input[type=submit] {
+#edit input[type=submit] {
 	border: 1px solid rgba(0, 0, 0, 0.3);  
     background: #64c8ef; /* Old browsers */  
     background: -moz-linear-gradient(top,  #64c8ef 0%, #00a2e2 100%); /* FF3.6+ */  
@@ -389,7 +397,6 @@ input#password {
     background: -ms-linear-gradient(top,  #64c8ef 0%,#00a2e2 100%); /* IE10+ */   
     padding: 5px 15px;  
     margin-right: 0; 
- 	margin-left: auto;
     margin-top: 15px;  
     border-radius: 3px;  
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
@@ -492,8 +499,8 @@ article.sign h3 {
 
 #feature img:hover {
 	-webkit-transform: scale(1.1);
-		-webkit-transition-timing-function: ease-out;
-		-webkit-transition-duration: 500ms;
+	-webkit-transition-timing-function: ease-out;
+	-webkit-transition-duration: 500ms;
 }
 
 #grid {
@@ -621,6 +628,88 @@ article.sign h3 {
 	border-radius: 10px;
 }
 
+#static {
+	margin-left: 5%;
+	margin-top: 2%;
+	width: 850px;
+	height: 400px;
+	border: 4px solid;
+	border-color: #27b;
+	background-color: #E6FAFF;
+	border-radius: 10px;
+}
+
+#static img { float: left; width: 400px; }
+
+#static a:hover {
+	width: 100%;
+	text-decoration: underline;
+}
+
+#static h2 { padding-left: 20px; }
+#static p { padding-left: 30px;}
+
+
+#info {
+	width: 300px;
+	margin-bottom: 2%;
+	padding: 4%;
+	float: left;
+}
+
+#contact {
+	margin: 0px auto;
+	margin-top: 4%;
+	padding: 2%;
+	width: 50%;
+	border: 4px solid;
+	border-color: #27b;
+	border-radius: 10px;
+}
+
+#contact input {
+    width:90%;
+    box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+    -webkit-box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF
+    -moz-box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+	border:1px solid #CCC;
+    background:#FFF;
+    margin:0 0 5px;
+    padding:10px;
+    border-radius:5px;
+}
+
+#contact button[type="submit"] {
+	border: 1px solid rgba(0, 0, 0, 0.3);  
+    background: #64c8ef; /* Old browsers */  
+    background: -moz-linear-gradient(top,  #64c8ef 0%, #00a2e2 100%); /* FF3.6+ */  
+    background: -webkit-gradient(linear, left top, left bottombottom, color-stop(0%,#64c8ef), color-stop(100%,#00a2e2)); /* Chrome,Safari4+ */  
+    background: -webkit-linear-gradient(top,  #64c8ef 0%,#00a2e2 100%); /* Chrome10+,Safari5.1+ */  
+    background: -o-linear-gradient(top,  #64c8ef 0%,#00a2e2 100%); /* Opera 11.10+ */  
+    background: -ms-linear-gradient(top,  #64c8ef 0%,#00a2e2 100%); /* IE10+ */   
+    padding: 5px 15px;  
+   	margin-left: 9%;
+	margin-top: 2%;
+    border-radius: 3px;  
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
+	width: 400px;
+	height: 50px;
+}
+
+#sitemap {
+	margin: 0px auto;
+	margin-top: 4%;
+	padding: 2%;
+	width: 50%;
+	border: 4px solid;
+	border-color: #27b;
+	border-radius: 10px;	
+}
+
+#sitemap ul { list-style-type: none; }
+#sitemap b { color: Black; }
+#sitemap a:visited { text-decoration: none; }
+
 #flash_notice, #flash_alert {
   padding: 5px 8px;
   margin: 20px 0;
@@ -657,6 +746,8 @@ footer a {
 	color:#27b;
 }
 
+footer.ftitle { font-weight: bold;
+}
 footer b { color: Black; }
 footer ul { list-style-type: none; }
 footer #left { float:left; }
