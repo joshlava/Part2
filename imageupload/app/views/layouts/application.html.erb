@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/rsz_logo2.ico">
 
-    <title><%= content_for?(:title) ? yield(:title) : "Project Part 2" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Balloon" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Rails3 Devise Rspec Cucumber" %>">
     <%= stylesheet_link_tag "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
@@ -31,23 +31,23 @@
   		<div id="footercontainer">
   		<div id="left">
   		<ul>
-  			<li><a href="home.html"><b>Balloon</b></a></li>
+  			<li><%= link_to content_tag(:b, "Balloon"), root_path %></li>
   			<li><%= link_to "News", posts_path, :class => 'brand' %></li>
-  			<li><a href="featured.html">Featured</a></li>
+  			<li><%= link_to "Featured", root_path%></li>
   		</ul>
   		</div>
   		<div id="mid">
   		<ul>
-  			<li><a href="about.html"><b>About Us</b></a></li>
-  			<li><a href="history.html">History</a></li>
+  			<li><%= link_to content_tag(:b, "About Us"), about_path %></a></li>
+  			<li><%= link_to "History", history_path %></li>
   		</ul>
   		</div>
   		<div id="right">
   		<ul>
-  			<li><a href="support.html"><b>Support</b></a></li>
-  			<li><a href="terms.html">Privacy & Terms</a></li>
-  			<li><a href="contact.html">Contact Us</a></li>
-  			<li><a href="sitemap.html">Site Map</a></li>
+  			<li><%= link_to content_tag(:b, "Support"), posts_path %></li>
+  			<li><%= link_to "Privacy & Terms", terms_path %></li>
+  			<li><%= link_to "Contact Us", contact_path %></li>
+  			<li><%= link_to "Site Map", sitemap_path %></li>
   		</ul>
   		</div>
   		<div id="last">
