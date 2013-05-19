@@ -1,16 +1,10 @@
 <div id="profile">
 <h2>edit</h2>
-<% photo = @photo %>
   <div id="portfolio">
-<%= image_tag photo.image_url(@size) %>
-    <form action="">
-      <select name="size">
-        <option value="<%= @size = :thumb %>">Thumbnail</option>
-        <option value="<%= @size = :small %>">Small</option>
-        <option value="<%= @size = :medium %>">Medium</option>
-        <option value="<%= @size = :large %>">Large</option>
-      </select>
-    </form>
+    <%= image_tag @photo.image_url(@disp[params[:size]] || :thumb) %>
+    <%= form_tag("", :method => "get") do %>
+    <%= select_tag "size", options_for_select(["Thumb","Small","Medium","Large"]), :prompt => "Select a size", :onchange => "this.form.submit()" %>
+    <% end %>
   </div>
 </div>
 

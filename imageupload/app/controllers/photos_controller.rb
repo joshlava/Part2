@@ -19,7 +19,7 @@ class PhotosController < ApplicationController
 
   def edit
     @photo = Photo.find(params[:id])
-    @size = :thumb
+    @disp = {'Thumb' => :thumb, 'Small' => :small, 'Medium' => :medium, 'Large' => :large}
   end
 
   def update
