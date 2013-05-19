@@ -1,74 +1,42 @@
 require 'spec_helper'
 
 describe User do
+	it "has a valid factory" do
+		FactoryGirl.create(:user).should be_valid
+	end
 
-  before do
-    @user = User.new(name: "Dylan1", email: "Dylan.Nangle@gmail1.com",
-                     password: "Password1")
-  end
+	it "is invalid without a name" do
+		FactoryGirl.build(:user, name: nil).should_not be_valid
+	end
 
-  subject { @user }
+	it "is invalid without an email" do
+		FactoryGirl.build(:user, email: nil).should_not be_valid
+	end
 
- it { should respond_to(:name) }
-  it { should respond_to(:email) }
-  it { should respond_to(:password) }
-  it { should be_valid }
-  
+	it "is invalid without a password" do
+		FactoryGirl.build(:user, password: nil).should_not be_valid
+	end
 
-  describe "when name is not present" do
-    before { @user.name = " " }
-    it { should_not be_valid }
-  end
+	it "when email format is invalid" do
+		FactoryGirl.build(:user, email: '1').should_not be_valid
+	end
 
-  describe "when email is not present" do
-    before { @user.email = " " }
-    it { should_not be_valid }
-  end
+	it "When an email address is already taken" do
+		user = FactoryGirl.create(:user)
+		FactoryGirl.build(:user, email: "Dylan.Nangle@mail.com").should_not be_valid
+		FactoryGirl.build(:user, email: "Dylan.Nangle@mail.com").should_not be_valid
+	end
 
-  describe "when email format is invalid" do
-    it "should be invalid" do
-      addresses = %w[]
-      addresses.each do |invalid_address|
-        @user.email = invalid_address
-        @user.should_not be_valid
-      end
-    end
-  end
+	it "when password is not present" do
+		FactoryGirl.build(:user, password: nil).should_not be_valid
+	end
 
-  describe "when email format is valid" do
-    it "should be valid" do
-      addresses = %w[Dylan.Nangle@gmail1.com]
-      addresses.each do |valid_address|
-        @user.email = valid_address
-        @user.should be_valid
-      end
-    end
-  end
+	it "when password is too short" do
+		FactoryGirl.build(:user, password: 'sss').should_not be_valid
+	end  
 
-  describe "when email address is already taken" do
-    before do
-      user_with_same_email = @user.dup
-      user_with_same_email.email = @user.email.upcase
-      user_with_same_email.save
-    end
-
-    it { should_not be_valid }
-  end
-  describe "when password is not present" do
-    before { @user.password = @user.password_confirmation = " " }
-    it { should_not be_valid }
-  end
-
-  describe "when password doesn't match confirmation" do
-    before { @user.password_confirmation = "mismatch" }
-    it { should_not be_valid }
-  end
-
-  describe "with a password that's too short" do
-    before { @user.password = @user.password_confirmation = "a" * 5 }
-    it { should be_invalid }
-  end
-
-    
-   
+	it "returns a users name testing the user instance variable" do
+		user = FactoryGirl.create(:user, name: "Dylan", email: "Dylan.Nangle@mails.com")
+		user.name.should == "Dylan"
+	end
 end
