@@ -174,7 +174,8 @@ hr.bottom {
 	display:block;
 	width:900px;
 	height:10%;
-	margin-top:4%;
+	margin-top:10%;
+	margin-left: 3%;
 	border-color: #E6FAFF;
 	background-color: #E6FAFF;	
 }
@@ -513,6 +514,9 @@ article.sign h3 {
 	margin: 0px auto;
 }
 
+img.top {
+        vertical-align: text-top;
+}
 
 #profile {
 	display: block;
