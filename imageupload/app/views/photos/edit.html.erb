@@ -1,10 +1,16 @@
 <div id="profile">
 <h2>edit</h2>
   <div id="portfolio">
-    <%= image_tag @photo.image_url(@disp[params[:size]] || :thumb) %>
+    
     <%= form_tag("", :method => "get") do %>
     <%= select_tag "size", options_for_select(["Thumb","Small","Medium","Large"]), :prompt => "Select a size", :onchange => "this.form.submit()" %>
+    <p>
+      Set photo to private: 
+      <%= check_box_tag("private", true, @photo.private, {:onchange => "this.form.submit()"}) %>
+    </p>
+    <p><%= @photo.private %></p>
     <% end %>
+    <%= image_tag @photo.image_url(@disp[params[:size]] || :thumb) %>
   </div>
 </div>
 
