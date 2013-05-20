@@ -1,16 +1,22 @@
-<div id="profile">
-<h2>edit</h2>
-  <div id="portfolio">
-    
+<h1>edit</h1>
+<section id="size">    
+  <div style="padding: 25px">
     <%= form_tag("", :method => "get") do %>
-    <%= select_tag "size", options_for_select(["Thumb","Small","Medium","Large"]), :prompt => "Select a size", :onchange => "this.form.submit()" %>
+    <p>
+      Current size: 
+      <%= params[:size] || "Thumb" %>
+      <span style="float: right;margin-right: 400px;">
+	<%= select_tag "size", options_for_select(["Thumb","Small","Medium","Large"]), :prompt => "Select a size", :onchange => "this.form.submit()" %>
+      </span>
+    </p>
     <p>
       Set photo to private: 
-      <%= check_box_tag("private", true, @photo.private, {:onchange => "this.form.submit()"}) %>
+      <span style="float: right;margin-right: 400px">
+	<%= check_box_tag("private", true, @photo.private, {:onchange => "this.form.submit()"}) %>
+      </span>
     </p>
-    <p><%= @photo.private %></p>
     <% end %>
     <%= image_tag @photo.image_url(@disp[params[:size]] || :thumb) %>
   </div>
-</div>
+</section>
 

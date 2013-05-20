@@ -620,7 +620,17 @@ img.top {
 }
 
 
+#size {
+        width: 850px;
+	height: 100%;
+	margin-left: auto;
+	margin-top: -3%;
+	background-color: #E6FAFF;
+}
 
+#size select {
+       width: 110px;
+}
 
 #news {
 	margin: 0px auto;
