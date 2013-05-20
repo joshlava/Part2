@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130513143229) do
+ActiveRecord::Schema.define(:version => 20130520034102) do
 
   create_table "friendships", :force => true do |t|
     t.integer  "user_id"
@@ -21,10 +21,12 @@ ActiveRecord::Schema.define(:version => 20130513143229) do
   end
 
   create_table "photos", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "image"
-    t.integer  "user_id"
+    t.boolean  "private", :null => true
   end
 
   create_table "posts", :force => true do |t|
@@ -60,7 +62,6 @@ ActiveRecord::Schema.define(:version => 20130513143229) do
     t.datetime "updated_at",                             :null => false
     t.string   "name"
     t.string   "avatar"
-    t.string   "image"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
