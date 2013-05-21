@@ -20,7 +20,7 @@ html, body, content {
 
 body{
 
-	width:900px;
+	width: 900px;
 	margin: 0 auto;
 	/*Above code centres the page, if you guys dont like, just delete and un comment the below
 	display: block;
@@ -40,47 +40,7 @@ h2 {
   padding-right: 8px;
 }
 
-header nav {
-	float: right;
-	margin-right: 10%;
-	margin-top: 5%;
-}
 
-header nav ul {
-	font-size: 14px;
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
-header nav ul li {
-	display: block;
-	position: relative;
-	float: left;
-}
-
-header nav ul li ul { display: none;} 
-
-header nav ul li a {
-	display: block;
-	text-decoration: none;
-	color: #fff;
-	padding: 5px 15px 5px 15px;
-	margin-left: 1px;
-	white-space: nowrap;
-}
-
-header nav li:hover ul {
-	display: block;
-	position: absolute;
-}
-
-header nav li:hover li {
-	float: none;
-	font-size: 11px;
-}
-
-header nav li:hover a { background: #E6FAFF; }
 
 a:link, a:visited {
     color:#27b;
@@ -97,8 +57,9 @@ header {
 	/*height: 10%;
 	width: 100%;
 	*/
-	height: 100px;
+	margin: 0px auto;
 	width: 900px;
+	z-index: 3;
 	font-family: 'Open Sans', sans-serif;
 }
 
@@ -195,6 +156,7 @@ hr.bottom {
 
 #maincontainer {
 	width: 900px;
+	min-height: 400px;
 }
 
 #maincontainer h1 {
@@ -584,7 +546,9 @@ article.sign h3 {
 
 #friends {
 	width: 150px;
-	float: left;
+	float: right;
+	margin-top: 3%;
+	margin-bottom: 30px;
 	margin-right: 4%;
 	border: 2px solid;
 	border-color: #27b;
