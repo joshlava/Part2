@@ -1,8 +1,7 @@
-
 <div id="profile">
 <% if user_signed_in? %>
 <div id="userinfo">
-  <%= image_tag(@user.avatar_url(:thumb)) %>
+  <%= link_to_if(@user.avatar_url, image_tag(@user.avatar_url(:thumb)), edit_display_path(current_user)) %>
 	<div id="welcome">
 	<% if @user != current_user %>
 		<% not_curr_user = "hide" %>
@@ -15,17 +14,6 @@
 </div>
 <hr id="hrpage"/>
 <div id="portfolio">
-
-	<% if @user.photos.count() == 0 %>
-	<div id="intro", style="margin-left: 30%;">
-	<%= image_tag("default.png", :alt => "Introductory Image") %>
-</div>
-	<% else %>
-	<ul>
-		
-		
- 	<% for photo in @user.photos %>
-
   <ul>
 <% friends = Array.new %>
 <% friends = Friendship.find_all_by_user_id(current_user.id) %>
@@ -51,34 +39,17 @@
   <% end %>
  <% end %>
   </ul>
- 	<% end %>
-	</ul>
-	<%end%>
-  <% end %>
- <% end %>
-  </ul>
-
-  <% end %>
- <% end %>
-  </ul>
 </div>
-<% if @user.friends.count() != 0 %>
+
 <div id="friends">
 <h3><span class="<%= not_curr_user %>">Your </span>Friends</h2>
 <ul>
-	
   <% for user in @user.friends %>
   <li><%= h user.name %></li>
   <% end %>  
-
 </ul>
 </div>
-  <%end%>
 
 <% end %>
-
   <div class="clear"></div>
 </div> 
-
-</div> 
-
