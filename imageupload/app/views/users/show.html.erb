@@ -12,7 +12,9 @@
 	<%= link_to "Add a Photo", new_photo_path(:user_id => @user), :id => "addphoto" %>
 		</p> 
 </div>
+
 <hr id="hrpage"/>
+
 <div id="portfolio">
 	<ul>
  	<% for photo in @user.photos %>
