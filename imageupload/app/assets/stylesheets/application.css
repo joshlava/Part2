@@ -12,14 +12,13 @@
  *= require_tree .
  */
 html, body, content {
- 	/*width:100%;*/
+ 	
 	z-index: 1;
 	font-family: 'Open Sans', sans-serif;
 
 }
 
 body{
-
 	width: 900px;
 	margin: 0 auto;
 	/*Above code centres the page, if you guys dont like, just delete and un comment the below
@@ -125,7 +124,7 @@ header nav li:hover a { background: #E6FAFF; }
 /** Horizontal rules with styling to separate the content, header, footer **/
 
 hr.top {
-	display: block;
+	
 	width:900px;
 	margin: 0 auto;
 	height:10%;
@@ -135,7 +134,7 @@ hr.top {
 
 
 hr.bottom {
-	display:block;
+	
 	width:900px;
 	height:10%;
 	margin: 0 auto;
@@ -179,9 +178,9 @@ hr.bottom {
 /** Sign up segment of introduction page **/
 
 .signup {
-	width: 400px;
+	width: 350px;
+	display: inline-block;
 	/*margin-left: 5%;*/
-	float: left;
 	margin-bottom: 5%;
 	background-color: rgba(250, 250, 250, 0.5);
 }
@@ -260,7 +259,7 @@ input#password {
 /** Edit account **/
 
 .signin {
-	float: left;
+	display: inline-block;
 	width: 400px;
 	/*margin-left: 5%;*/
 	margin-bottom: 5%;
@@ -372,7 +371,7 @@ input#password {
 /** Introduction of sign up page holding images and headers **/
 
 article.intro {
-	float:left;
+	display: inline-block;
 	width: 400px;
 	margin-left: 8%;
 	margin-top: 2%;
@@ -684,12 +683,11 @@ article.sign h3 {
 }
 #flash_notice {
 	float:right;
-	height: 25px;
+	margin: 0 auto;
   	background-color: #CFC;
  	border: solid 1px #6C6;
 }
 #flash_alert {
-	height: 25px;
 	float:right;
    	background-color: #FCC;
   	border: solid 1px #C66;
