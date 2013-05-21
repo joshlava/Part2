@@ -163,8 +163,8 @@ header nav li:hover a { background: #E6FAFF; }
 hr.top {
 	display: block;
 	width:900px;
-	margin-top:1%;
-	height:10%;
+	margin-top:10%;
+	height:0.5px;
 	border-color: #E6FAFF;
 	background-color: #E6FAFF;
 }
@@ -174,7 +174,6 @@ hr.bottom {
 	display:block;
 	width:900px;
 	height:10%;
-	margin-top:4%;
 	border-color: #E6FAFF;
 	background-color: #E6FAFF;	
 }
@@ -194,7 +193,8 @@ hr.bottom {
 /** Main container to hold page specifics **/
 
 #maincontainer {
-	width: 900px;
+	display: block;
+	width: 1000px;
 }
 
 #maincontainer h1 {
@@ -207,7 +207,7 @@ hr.bottom {
 
 
 #maincontainer h2 {
-	margin: 0px auto;
+	margin-left: 40%;
 	padding-top: 5%;
 	padding-bottom: 3%;
 }
@@ -529,7 +529,6 @@ article.sign h3 {
 	border: 1px solid;
 	border-color: #27b;
 	margin-left: 3%;
-	background-color: #E6FAFF;
 	border-radius: 10px;
 }
 
@@ -646,8 +645,39 @@ article.sign h3 {
 	text-decoration: underline;
 }
 
-#static h2 { padding-left: 20px; }
-#static p { padding-left: 30px;}
+#static p { padding-left: 20px;}
+
+#featprof {
+margin: 0px auto;
+	width: 850px;
+	height: 425px;
+	border: 4px solid;
+	border-color: #27b;
+	background-color: #E6FAFF;
+	border-radius: 10px;
+}
+
+
+
+#featprof a:hover {
+	width: 100%;
+	text-decoration: underline;
+}
+
+#featuser{
+	width: 250px;
+	margin-bottom: 2%;
+	padding: 4%;
+	float: left;
+}
+#featuser img {
+	float: left;
+}
+
+#featimg {
+	
+}
+#static p { padding-left: 20px;}
 
 
 #info {

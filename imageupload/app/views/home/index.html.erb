@@ -1,7 +1,19 @@
+<div id="featprof">
+	<div id ="featuser">
+		<h3>User Spotlight</h3>
+		<%=link_to @my_user[0].name, @my_user[0] %>
+		<span style="white-space: nowrap;">Date Joined: <%= @my_user[0].created_at.strftime("%d %b %Y") %></span>
+		<span style="white-space: nowrap">
+		Images set free:  <%= @my_user[0].photos.size %>
+		</span>
+		<% if @my_user[0].avatar_url(:thumb) %>
+		<%= image_tag(@my_user[0].avatar_url(:thumb)) if @my_user[0].avatar_url %>
+		<% end %>
+	</div>
+	<%= image_tag @fphoto[0].image_url(:small) if @fphoto[0].image?, :id => 'featimg' %>
+</div>
 
-<%=link_to @my_user[0].name, @my_user[0] %>
-<%= image_tag @fphoto[0].image_url(:small) if @fphoto[0].image? %>
-<h1>Featured</h1>
+<h2>Featured</h2>
 <section id="home">
 	<div id="grid">
 <% @featured.each do |user| %>
@@ -18,17 +30,3 @@
 </div>
 </section>
 
-<h1>Community</h1>
-<section id"allusers">
-<div id="grid2">
-<% @users.each do |user| %>
-<div id="feature">
-	<%= image_tag(user.avatar_url(:thumb)) if user.avatar_url %>
-  <p><%=link_to user.name, user %>
-      Photos: <%= user.photos.size %>
-	<%= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post %>
-	</p>
-</div>  
-<% end %>
-</div>
-</section>
