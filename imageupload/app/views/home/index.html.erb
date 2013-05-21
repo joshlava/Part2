@@ -17,6 +17,8 @@
 
 <h2>Featured</h2>
 =======
+=======
+>>>>>>> 5d0502b5c62ebe8a82979719d4e39ff5320be0c6
 <p style="float: right">
   Logged in as: 
   <%=link_to current_user.name, current_user %>
@@ -24,12 +26,6 @@
 </p>
 <h1>Featured</h1>
 >>>>>>> 5d0502b5c62ebe8a82979719d4e39ff5320be0c6
-=======
-
-<%=link_to @my_user[0].name, @my_user[0] %>
-<%= image_tag @fphoto[0].image_url(:small) if @fphoto[0].image? %>
-<h1>Featured</h1>
->>>>>>> parent of 58af87e... No Major Changes
 <section id="home">
 	<div id="grid">
 <% @featured.each do |user| %>
@@ -93,19 +89,4 @@
 <<<<<<< HEAD
 >>>>>>> 5d0502b5c62ebe8a82979719d4e39ff5320be0c6
 =======
-
-<h1>Community</h1>
-<section id"allusers">
-<div id="grid2">
-<% @users.each do |user| %>
-<div id="feature">
-	<%= image_tag(user.avatar_url(:thumb)) if user.avatar_url %>
-  <p><%=link_to user.name, user %>
-      Photos: <%= user.photos.size %>
-	<%= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post %>
-	</p>
-</div>  
-<% end %>
-</div>
-</section>
->>>>>>> parent of 58af87e... No Major Changes
+>>>>>>> 5d0502b5c62ebe8a82979719d4e39ff5320be0c6
