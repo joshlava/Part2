@@ -19,7 +19,13 @@ class PhotosController < ApplicationController
 
   def edit
     @photo = Photo.find(params[:id])
-    @size = :thumb
+    @disp = {'Thumb' => :thumb, 'Small' => :small, 'Medium' => :medium, 'Large' => :large}
+    if @photo.update_attribute(:private, (params[:private]))
+      flash[:notice] = @photo.private ? ("Photo successfully set to private.") : ("Photo successfully set to public.")
+      
+    else
+      render :action => 'edit'
+    end
   end
 
   def update

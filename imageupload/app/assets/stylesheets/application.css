@@ -710,10 +710,14 @@ article.sign h3 {
 #sitemap b { color: Black; }
 #sitemap a:visited { text-decoration: none; }
 
+#size {
+    background-color: #E6FAFF; 
+    margin-left: 5%;
+}
+
 #flash_notice, #flash_alert {
   padding: 5px 8px;
   margin: 20px 0;
-
 }
 #flash_notice {
 	z-index: 2;
