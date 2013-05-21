@@ -680,20 +680,19 @@ article.sign h3 {
 }
 
 #flash_notice, #flash_alert {
-  padding: 5px 8px;
-  margin: 20px 0;
+
 }
 #flash_notice {
-	z-index: 2;
 	float:right;
-  background-color: #CFC;
-  border: solid 1px #6C6;
+	height: 25px;
+  	background-color: #CFC;
+ 	border: solid 1px #6C6;
 }
-#flash_alert {f
-	z-index: 2;
+#flash_alert {
+	height: 25px;
 	float:right;
-  background-color: #FCC;
-  border: solid 1px #C66;
+   	background-color: #FCC;
+  	border: solid 1px #C66;
 }
 
 /** Footer **/
