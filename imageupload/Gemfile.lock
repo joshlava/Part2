@@ -203,7 +203,7 @@ DEPENDENCIES
   launchy (>= 2.1.2)
   quiet_assets (>= 1.0.1)
   rails (= 3.2.13)
-  rake (~> 10.0.4)
+  rake (>= 10.0.4)
   rmagick
   rolify (>= 3.2.0)
   rspec-rails (>= 2.12.2)
