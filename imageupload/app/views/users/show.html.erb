@@ -16,6 +16,7 @@
 <hr id="hrpage"/>
 <div id="portfolio">
 <<<<<<< HEAD
+<<<<<<< HEAD
 	<% if @user.photos.count() == 0 %>
 	<div id="intro", style="margin-left: 30%;">
 	<%= image_tag("default.png", :alt => "Introductory Image") %>
@@ -26,6 +27,8 @@
 		
  	<% for photo in @user.photos %>
 =======
+=======
+>>>>>>> 5d0502b5c62ebe8a82979719d4e39ff5320be0c6
   <ul>
 <% friends = Array.new %>
 <% friends = Friendship.find_all_by_user_id(current_user.id) %>
@@ -40,6 +43,9 @@
 <% for photo in @user.photos %>
 <li><%= photo.private %></li>
   <% if !photo.private or (@user == current_user) or (photo.private and friend) %>
+<<<<<<< HEAD
+>>>>>>> 5d0502b5c62ebe8a82979719d4e39ff5320be0c6
+=======
 >>>>>>> 5d0502b5c62ebe8a82979719d4e39ff5320be0c6
     <li>
     <%= image_tag photo.image_url(:thumb) if photo.image? %>
@@ -50,9 +56,15 @@
       </p>
     </li>
 <<<<<<< HEAD
+<<<<<<< HEAD
  	<% end %>
 	</ul>
 	<%end%>
+=======
+  <% end %>
+ <% end %>
+  </ul>
+>>>>>>> 5d0502b5c62ebe8a82979719d4e39ff5320be0c6
 =======
   <% end %>
  <% end %>
