@@ -40,7 +40,9 @@ h2 {
   padding-right: 8px;
 }
 
-
+.mid {
+    vertical-align: middle;
+}
 
 a:link, a:visited {
     color:#27b;
