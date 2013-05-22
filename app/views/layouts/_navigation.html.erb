@@ -1,0 +1,42 @@
+
+<nav>
+	<ul id="navmenu">
+		<li>
+			<b>
+			<%= link_to "News", posts_path, :class => 'brand' %>
+			</b>
+		</li>
+		<li>
+			<b>
+			<%= link_to "Featured", root_path, :class => 'brand' %>
+			</b>
+		</li>
+  	  <% if user_signed_in? %>
+   		<li>
+			<b>
+    		<%= link_to 'Logout', destroy_user_session_path, :method=>'delete' %>
+			</b>
+    	</li>
+  <% else %>
+    	<li>
+			<b>
+    <%= link_to 'Login', new_user_session_path %>
+			</b>
+   	 </li>
+  		<% end %>
+  <% if user_signed_in? %>
+    	<li>
+			<b>
+    			<%= link_to 'Profile', user_path(current_user) %>
+			</b>
+			<ul>
+				<li><%= link_to 'Edit', edit_registration_path(current_user) %></li>
+			</ul>
+   	 	</li>
+  <% end %>
+		<li>
+			<b>
+				<%= link_to 'Support', edit_user_registration_path %>
+			</b>
+		</li>
+</ul>
