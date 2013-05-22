@@ -12,7 +12,7 @@
 	<%= link_to "Add a Photo", new_photo_path(:user_id => @user), :id => "addphoto" %>
 		</p> 
 </div>
-
+<div style=" overflow: auto; width: 100%;">
 <div id="portfolio">
 	<ul>
 	  <% friends = Array.new %>
@@ -48,7 +48,7 @@
   <% end %>  
 </ul>
 </div>
-
+</div>
 <% end %>
   <div class="clear"></div>
 </div> 
