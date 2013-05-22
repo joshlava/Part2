@@ -5,11 +5,10 @@ describe ApplicationController do
  user.save!
 
 
-  #describe "GET 'show'" do
-    #it "should be successful" do
-	#get:show
-     	#assigns(:users).should eq([user])
-    #end
- #end
+  describe "GET 'show'" do
+    it "should be successful" do
+	get :show
+    end
+ end
 
 end
