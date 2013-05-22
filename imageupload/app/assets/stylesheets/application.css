@@ -474,7 +474,8 @@ article.sign h3 {
 
 #profile {
 	display: block;
-	width: 1000px;
+	width: 100%;
+	overflow: auto;
 }
 
 #profile .hide { display: none;}
@@ -500,7 +501,6 @@ article.sign h3 {
 #portfolio {
 	width: 800px;
 	float: left;
-	margin-left: -3%;
 }
 
 #portfolio li {
