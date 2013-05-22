@@ -51,6 +51,7 @@ header {
 	*/
 	height: 10%;
 	width: 100%;
+	overflow: auto;
 	font-family: 'Open Sans', sans-serif;
 }
 
@@ -255,6 +256,7 @@ input#password {
 	width: 55%;
 	margin-top: -35%;
 	margin-left: 5%;
+	margin-right: -5%;
 	margin-bottom: 5%;
 	background-color: rgba(250, 250, 250, 0.5);
 }
@@ -367,7 +369,7 @@ article.intro {
 	display: block;
 	width: 45%;
 	max-width: 45%;
-	margin-left: 8%;
+	margin-left: 10%;
 	margin-top: 2%;
 }
 
