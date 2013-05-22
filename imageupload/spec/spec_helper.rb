@@ -13,7 +13,7 @@ add_filter '/vendor/'
 add_group 'Controllers', 'app/controllers'
 add_group 'Models', 'app/models'
 add_group 'Helpers', 'app/helpers'
-add_group 'Views', 'app/views'
+add_group 'Views', 'app/views/*'
 
 end
 # Requires supporting ruby files with custom matchers and macros, etc,
