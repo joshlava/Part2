@@ -12,15 +12,14 @@
  *= require_tree .
  */
 html, body, content {
- 	/*width:100%;*/
+ 	
 	z-index: 1;
 	font-family: 'Open Sans', sans-serif;
 
 }
 
 body{
-
-	width:960px;
+	width: 900px;
 	margin: 0 auto;
 	/*Above code centres the page, if you guys dont like, just delete and un comment the below
 	display: block;
@@ -40,47 +39,9 @@ h2 {
   padding-right: 8px;
 }
 
-header nav {
-	float: right;
-	margin-right: 10%;
-	margin-top: 5%;
+.mid {
+    vertical-align: middle;
 }
-
-header nav ul {
-	font-size: 14px;
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
-header nav ul li {
-	display: block;
-	position: relative;
-	float: left;
-}
-
-header nav ul li ul { display: none;} 
-
-header nav ul li a {
-	display: block;
-	text-decoration: none;
-	color: #fff;
-	padding: 5px 15px 5px 15px;
-	margin-left: 1px;
-	white-space: nowrap;
-}
-
-header nav li:hover ul {
-	display: block;
-	position: absolute;
-}
-
-header nav li:hover li {
-	float: none;
-	font-size: 11px;
-}
-
-header nav li:hover a { background: #E6FAFF; }
 
 a:link, a:visited {
     color:#27b;
@@ -94,8 +55,12 @@ a img { border-width:0; }
 
 header {
 	display: block;
-	height: 10%;
+	/*height: 10%;
 	width: 100%;
+	*/
+	margin: 0px auto;
+	width: 900px;
+	z-index: 3;
 	font-family: 'Open Sans', sans-serif;
 }
 
@@ -161,9 +126,9 @@ header nav li:hover a { background: #E6FAFF; }
 /** Horizontal rules with styling to separate the content, header, footer **/
 
 hr.top {
-	display: block;
+	
 	width:900px;
-	margin-top:1%;
+	margin: 0 auto;
 	height:10%;
 	border-color: #E6FAFF;
 	background-color: #E6FAFF;
@@ -171,21 +136,17 @@ hr.top {
 
 
 hr.bottom {
-	display:block;
+	
 	width:900px;
 	height:10%;
-	margin-top:10%;
-	margin-left: 3%;
+	margin: 0 auto;
 	border-color: #E6FAFF;
 	background-color: #E6FAFF;	
 }
 
 #hrpage {
-	display:block;
-	width: 900px;
-	height:.5px;
-	margin-top: 5%;
-	margin-right: 7%;
+	width: 100%;
+	height: 10%;
 	border-color: #E6FAFF;
 	background-color: #E6FAFF;	
 }
@@ -196,6 +157,7 @@ hr.bottom {
 
 #maincontainer {
 	width: 900px;
+	min-height: 400px;
 }
 
 #maincontainer h1 {
@@ -514,9 +476,6 @@ article.sign h3 {
 	margin: 0px auto;
 }
 
-img.top {
-        vertical-align: text-top;
-}
 
 #profile {
 	display: block;
@@ -537,7 +496,10 @@ img.top {
 	border-radius: 10px;
 }
 
-#welcome { padding-left: 15%; }
+#welcome { 
+    min-height: 112px;
+    padding-left: 15%;
+ }
 
 
 #portfolio {
@@ -588,7 +550,9 @@ img.top {
 
 #friends {
 	width: 150px;
-	float: left;
+	float: right;
+	margin-top: 3%;
+	margin-bottom: 30px;
 	margin-right: 4%;
 	border: 2px solid;
 	border-color: #27b;
@@ -620,17 +584,7 @@ img.top {
 }
 
 
-#size {
-        width: 850px;
-	height: 100%;
-	margin-left: auto;
-	margin-top: -3%;
-	background-color: #E6FAFF;
-}
 
-#size select {
-       width: 110px;
-}
 
 #news {
 	margin: 0px auto;
@@ -724,22 +678,24 @@ img.top {
 #sitemap b { color: Black; }
 #sitemap a:visited { text-decoration: none; }
 
+#size {
+    background-color: #E6FAFF; 
+    margin-left: 5%;
+}
+
 #flash_notice, #flash_alert {
-  padding: 5px 8px;
-  margin: 20px 0;
 
 }
 #flash_notice {
-	z-index: 2;
 	float:right;
-  background-color: #CFC;
-  border: solid 1px #6C6;
+	margin: 0 auto;
+  	background-color: #CFC;
+ 	border: solid 1px #6C6;
 }
-#flash_alert {f
-	z-index: 2;
+#flash_alert {
 	float:right;
-  background-color: #FCC;
-  border: solid 1px #C66;
+   	background-color: #FCC;
+  	border: solid 1px #C66;
 }
 
 /** Footer **/

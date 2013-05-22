@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   
   def index
     @user = User.all
-    @users = User.find(params[:id])
+    @users = User.search(params[:id])
   end
 
   def show

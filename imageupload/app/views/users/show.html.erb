@@ -12,10 +12,21 @@
 	<%= link_to "Add a Photo", new_photo_path(:user_id => @user), :id => "addphoto" %>
 		</p> 
 </div>
-<hr id="hrpage"/>
+
 <div id="portfolio">
 	<ul>
+	  <% friends = Array.new %>
+	  <% friends = Friendship.find_all_by_user_id(current_user.id) %>
+	  <% friends.concat(Friendship.find_all_by_friend_id(current_user.id)) %>
+	  <% friend = false %>
+	  <% friends.each do |friendship| %>
+	    <% if (friendship.user_id == current_user.id and friendship.friend_id == @user.id) or %>
+	    <% (friendship.user_id == @user.id and friendship.friend_id == current_user.id) %>
+	      <% friend = true%>
+	    <% end %>
+	  <% end %>
  	<% for photo in @user.photos %>
+  <% if !photo.private or (@user == current_user) or (photo.private and friend) %>
     <li>
     <%= image_tag photo.image_url(:thumb) if photo.image? %>
 		  <p class="<%= not_curr_user %>">
@@ -24,7 +35,8 @@
         <%= link_to "remove", photo, :confirm => 'Are you sure?', :method => :delete %>
 			</p>
     </li>
- 	<% end %>
+    <% end %>
+    <% end %>
 	</ul>
 </div>
 

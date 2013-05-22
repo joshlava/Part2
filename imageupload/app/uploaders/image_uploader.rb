@@ -42,11 +42,11 @@ class ImageUploader < CarrierWave::Uploader::Base
     end
 
   version :medium do
-      process :resize_to_limit => [600, 600]
+      process :resize_to_fill => [600, 600]
     end
     
   version :large do
-      process :resize_to_limit => [800, 800]
+      process :resize_to_fill => [800, 800]
     end
 
   # Create different versions of your uploaded files:

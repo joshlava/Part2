@@ -20,13 +20,15 @@
 			<h1>Balloon</h1>
   		</div>
         <%= render 'layouts/navigation' %>
-        <%= render 'layouts/messages' %>
+        
       </header>
 	  <hr class="top"/>
+	   
       <div id="maincontainer" role="main">
         <%= yield %>
       </div>
 	  <hr class="bottom">
+	  <%= render 'layouts/messages' %>
       <footer>
   		<div id="footercontainer">
   		<div id="left">

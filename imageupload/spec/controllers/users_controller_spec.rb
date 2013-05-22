@@ -4,7 +4,6 @@ describe UsersController do
 
   before (:each) do
     @user = FactoryGirl.create(:user)
-    @user.save!
     sign_in @user
   end
 
@@ -19,13 +18,7 @@ describe UsersController do
       get :show, :id => @user.id
       assigns(:user).should == @user
     end
-  end
-
-  describe "GET index" do
-	it "should be successful" do
-		get :index, :id => @user.id
-		response.should render_template :index
-	end
+    
   end
 
 end
