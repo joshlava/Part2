@@ -592,7 +592,7 @@ article.sign h3 {
 }
 
 #static {
-	margin-left: 5%;
+	margin-left: 7%;
 	margin-top: 2%;
 	width: 850px;
 	height: 400px;
@@ -609,7 +609,7 @@ article.sign h3 {
 	text-decoration: underline;
 }
 
-#static h2 { padding-left: 20px; }
+#static h2 { padding-left: 2px; }
 #static p { padding-left: 30px;}
 
 
