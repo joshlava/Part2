@@ -1,11 +1,12 @@
 class User < ActiveRecord::Base
   rolify
   mount_uploader :avatar, AvatarUploader
-  has_many :photos  
+  has_many :photos
   has_many :friendships
   has_many :friends, :through => :friendships
-  
  
+ 
+  
    
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
