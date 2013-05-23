@@ -145,7 +145,7 @@ hr.bottom {
 
 #maincontainer {
 	display: block;
-	overflow: hidden;
+	overflow: auto;
 	width: 100%;
 }
 
