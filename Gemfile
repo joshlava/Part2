@@ -13,6 +13,7 @@ gem 'google-webfonts'
 
 gem 'carrierwave'
 gem 'rmagick'
+gem "geocoder"
 gem 'cancan'
 gem "rolify", ">= 3.2.0"
 
