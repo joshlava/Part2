@@ -1,7 +1,6 @@
 class CreatePhotos < ActiveRecord::Migration
   def self.up
     create_table :photos do |t|
-    
       t.string :name
       t.timestamps
     end
