@@ -51,7 +51,7 @@ header {
 	*/
 	height: 10%;
 	width: 100%;
-	overflow: auto;
+	overflow: hidden;
 	font-family: 'Open Sans', sans-serif;
 }
 
@@ -145,7 +145,7 @@ hr.bottom {
 
 #maincontainer {
 	display: block;
-	overflow: auto;
+	overflow: hidden;
 	width: 100%;
 }
 
