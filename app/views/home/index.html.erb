@@ -14,8 +14,12 @@
   <% end %>
   <p><%=link_to user.name, user %>
      Photos: <%= user.photos.size %>
-  <% if current_user.id!=user.id and !(Friendship.find_by_user_id_and_friend_id(current_user.id,user.id)) %>
-      <%= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post %>
+  <% if current_user.id!=user.id %>
+      <% if Friendship.find_by_user_id_and_friend_id(current_user.id,user.id) %>
+        <%= link_to "Remove", Friendship.find_by_user_id_and_friend_id(current_user.id,user.id), :confirm => "Are you sure?", :method => :delete, :redirect => "/home"%>
+      <% else %>
+        <%= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post %>
+      <% end %>
   <% end %>
   </p>
 </div>  
