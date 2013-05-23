@@ -14,20 +14,8 @@
   <% end %>
   <p><%=link_to user.name, user %>
      Photos: <%= user.photos.size %>
-  <% if current_user.id!=user.id %>
-    <% friends = Array.new %>
-    <% friends = Friendship.find_all_by_user_id(current_user.id) %>
-    <% friends.concat(Friendship.find_all_by_friend_id(current_user.id)) %>
-    <% friend = false %>
-    <% friends.each do |friendship| %>
-      <% if (friendship.user_id == current_user.id and friendship.friend_id == user.id) or %>
-      <% (friendship.user_id == user.id and friendship.friend_id == current_user.id) %>
-	<% friend = true%>
-      <% end %>
-    <% end %>
-    <% if !friend %>
+  <% if current_user.id!=user.id and !(Friendship.find_by_user_id_and_friend_id(current_user.id,user.id)) %>
       <%= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post %>
-    <% end %>
   <% end %>
   </p>
 </div>  

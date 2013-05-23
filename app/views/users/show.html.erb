@@ -15,18 +15,8 @@
 
 <div id="portfolio">
 	<ul>
-	  <% friends = Array.new %>
-	  <% friends = Friendship.find_all_by_user_id(current_user.id) %>
-	  <% friends.concat(Friendship.find_all_by_friend_id(current_user.id)) %>
-	  <% friend = false %>
-	  <% friends.each do |friendship| %>
-	    <% if (friendship.user_id == current_user.id and friendship.friend_id == @user.id) or %>
-	    <% (friendship.user_id == @user.id and friendship.friend_id == current_user.id) %>
-	      <% friend = true%>
-	    <% end %>
-	  <% end %>
  	<% for photo in @user.photos %>
-  <% if !photo.private or (@user == current_user) or (photo.private and friend) %>
+  <% if !photo.private or (@user == current_user) or (photo.private and Friendship.find_by_user_id_and_friend_id(@user.id, current_user.id)) %>
     <li>
     <%= image_tag photo.image_url(:thumb) if photo.image? %>
 		  <p class="<%= not_curr_user %>">
@@ -44,7 +34,9 @@
 <h3><span class="<%= not_curr_user %>">Your </span>Friends</h2>
 <ul>
   <% for user in @user.friends %>
-  <li><%= h user.name %></li>
+    <% if Friendship.find_by_user_id_and_friend_id(user.id,@user.id) %>
+      <li><%= h user.name %></li>
+    <% end %>  
   <% end %>  
 </ul>
 </div>
