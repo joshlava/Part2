@@ -51,7 +51,7 @@ header {
 	*/
 	height: 10%;
 	width: 100%;
-	overflow: hidden;
+	overflow: auto;
 	font-family: 'Open Sans', sans-serif;
 }
 
